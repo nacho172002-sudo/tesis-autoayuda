@@ -19,7 +19,7 @@ def consultar_gemini(sintoma, auto_modelo):
         return "⚠️ Error: Falta configurar la API Key."
     
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-pro')
+    model = genai.GenerativeModel('gemini-1.5-flash')
     
     prompt = f"""
     Actúa como un mecánico experto con 30 años de experiencia.
@@ -97,4 +97,3 @@ with tab2:
     else:
         st.info("Aún no hay diagnósticos realizados en esta sesión.")
 
-        
